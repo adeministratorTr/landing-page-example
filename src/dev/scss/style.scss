@@ -1,0 +1,86 @@
+//Mobile first css
+// This applies from 0px to 600px
+// body {
+//   background: red;
+// }
+
+// // This applies from 600px onwards
+// @media (min-width: 600px) {
+//   body {
+//     background: green;
+//   }
+// }
+
+$limit-min-mobile: 480px;
+$limit-max-mobile: 600px;
+$limit-min-desktop: 601px;
+
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  background-color: pink;
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif !important;
+  background-size: cover;
+  background-image: url('../images/sitting-couple.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  max-height: 100vh;
+
+  @media screen and (max-width: $limit-max-mobile){
+    background-color: red;
+  }
+}
+
+#fixed-header {
+  border: 2px dashed white;
+  vertical-align: middle;
+  text-align: center;
+  top: 0;
+  height: 10vh;
+  padding-top: 10px;
+}
+
+#main {
+  border: 2px dashed red;
+  height: 80vh;
+  padding-top: 15%;
+  vertical-align: middle;
+
+  @media screen and (max-width: $limit-max-mobile) {
+    padding-top: 15%;
+  }
+}
+
+.store-banner {
+  width: 15%;
+
+  @media screen and (max-width: $limit-max-mobile) {
+    width: 60%;
+  }
+}
+
+#fixed-footer {
+  border: 2px dashed white;
+  bottom: 0;
+  height: 10vh;
+  padding-top: 10px;
+}
+
+.title {
+  font-size: 55px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.detail {
+  font-size: 35px;
+  vertical-align: middle;
+  padding-bottom: 50px;
+
+  @media screen and (max-width: $limit-max-mobile) {
+    padding-bottom: 0px;
+  }
+}
